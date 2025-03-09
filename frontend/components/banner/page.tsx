@@ -71,6 +71,8 @@ function Banner({ slides, autoplaySpeed = 3000, className }: BannerSlideshowProp
               sizes='(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw'
             />
 
+            <div className='dark:h-full dark:w-full dark:absolute dark:bg-black dark:opacity-50'></div>
+
             {/* Content overlay */}
             <div className='absolute inset-0 bg-black/30 flex flex-col justify-center px-6 sm:px-12 md:px-16 lg:px-24'>
               <div className='max-w-2xl text-white'>

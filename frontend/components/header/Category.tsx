@@ -32,7 +32,7 @@ function Category() {
           <div className='absolute left-0 top-full z-50     rounded-md overflow-hidden'>
             <div className='flex max-w-full'>
               {/* First Level - Parent Categories */}
-              <div className=' bg-white  border-2 min-h-[400px]'>
+              <div className=' bg-slate-100 dark:bg-slate-800  border-2 min-h-[400px]'>
                 <ul className='py-2'>
                   {categories.map((category) => (
                     <li

@@ -88,8 +88,7 @@ dark:text-slate-100'>
               <li>
                 <Link
                   href='/about'
-                  className='text-black
-dark:text-slate-100 hover:text-white transition-colors'>
+                  className='text-black dark:text-slate-100 hover:text-slate-600 transition-colors  '>
                   About Us
                 </Link>
               </li>
@@ -97,7 +96,7 @@ dark:text-slate-100 hover:text-white transition-colors'>
                 <Link
                   href='/careers'
                   className='text-black
-dark:text-slate-100 hover:text-white transition-colors'>
+dark:text-slate-100 hover:text-slate-600 transition-colors  '>
                   Careers
                 </Link>
               </li>
@@ -105,7 +104,7 @@ dark:text-slate-100 hover:text-white transition-colors'>
                 <Link
                   href='/blog'
                   className='text-black
-dark:text-slate-100 hover:text-white transition-colors'>
+dark:text-slate-100 hover:text-slate-600 transition-colors  '>
                   Blog
                 </Link>
               </li>
@@ -113,7 +112,7 @@ dark:text-slate-100 hover:text-white transition-colors'>
                 <Link
                   href='/press'
                   className='text-black
-dark:text-slate-100 hover:text-white transition-colors'>
+dark:text-slate-100 hover:text-slate-600 transition-colors  '>
                   Press Releases
                 </Link>
               </li>
@@ -121,7 +120,7 @@ dark:text-slate-100 hover:text-white transition-colors'>
                 <Link
                   href='/contact'
                   className='text-black
-dark:text-slate-100 hover:text-white transition-colors'>
+dark:text-slate-100 hover:text-slate-600 transition-colors  '>
                   Contact Us
                 </Link>
               </li>
@@ -132,7 +131,7 @@ dark:text-slate-100 hover:text-white transition-colors'>
           <div>
             <h3
               className='text-lg font-semibold mb-6 text-black
-dark:text-slate-100'>
+dark:text-slate-100  '>
               Resources
             </h3>
             <ul className='space-y-4'>
@@ -140,7 +139,7 @@ dark:text-slate-100'>
                 <Link
                   href='/help'
                   className='text-black
-dark:text-slate-100 hover:text-white transition-colors'>
+dark:text-slate-100 hover:text-slate-600 transition-colors  '>
                   Help Center
                 </Link>
               </li>
@@ -148,7 +147,7 @@ dark:text-slate-100 hover:text-white transition-colors'>
                 <Link
                   href='/privacy'
                   className='text-black
-dark:text-slate-100 hover:text-white transition-colors'>
+dark:text-slate-100 hover:text-slate-600 transition-colors  '>
                   Privacy Policy
                 </Link>
               </li>
@@ -156,7 +155,7 @@ dark:text-slate-100 hover:text-white transition-colors'>
                 <Link
                   href='/terms'
                   className='text-black
-dark:text-slate-100 hover:text-white transition-colors'>
+dark:text-slate-100 hover:text-slate-600 transition-colors  '>
                   Terms of Service
                 </Link>
               </li>
@@ -164,7 +163,7 @@ dark:text-slate-100 hover:text-white transition-colors'>
                 <Link
                   href='/faq'
                   className='text-black
-dark:text-slate-100 hover:text-white transition-colors'>
+dark:text-slate-100 hover:text-slate-600 transition-colors  '>
                   FAQ
                 </Link>
               </li>

@@ -26,6 +26,8 @@ function NoticeBar({ img, noticeText, buttonName, buttonLink = 'https:/www.faceb
           objectFit='cover'
           className='opacity-50'
         />
+
+        <div className='dark:h-full dark:w-full dark:absolute dark:bg-black dark:opacity-50'></div>
       </div>
 
       <div className='relative flex items-center justify-between px-6 py-3 text-white'>
@@ -38,7 +40,7 @@ function NoticeBar({ img, noticeText, buttonName, buttonLink = 'https:/www.faceb
             <Link
               href={buttonLink}
               target='_blank'
-              className='text-black bg-slate-200 px-4 rounded-2xl hover:bg-slate-300 duration-300 text-[12px] md:text-base'>
+              className='text-black bg-slate-200 px-4 rounded-2xl hover:bg-slate-300 duration-300 text-[12px] md:text-base dark:bg-slate-900 dark:text-slate-200'>
               {buttonName}
             </Link>
           )}
@@ -46,7 +48,7 @@ function NoticeBar({ img, noticeText, buttonName, buttonLink = 'https:/www.faceb
           {/* Close Button */}
           <button
             onClick={() => setIsVisible(false)}
-            className='text-white hover:text-gray-300'>
+            className='text-white hover:text-gray-300  cursor-pointer'>
             <X className='w-5 h-5' />
           </button>
         </div>
