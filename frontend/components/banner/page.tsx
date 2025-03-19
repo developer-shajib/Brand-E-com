@@ -12,17 +12,18 @@ interface BannerSlide {
   imageUrl: string;
   title: string;
   description: string;
-  buttonName: string;
-  buttonUrl: string;
+  buttonName?: string;
+  buttonUrl?: string;
 }
 
 interface BannerSlideshowProps {
   slides: BannerSlide[];
   autoplaySpeed?: number;
   className?: string;
+  navigationArrows?: boolean;
 }
 
-function Banner({ slides, autoplaySpeed = 3000, className }: BannerSlideshowProps) {
+function Banner({ slides, autoplaySpeed = 3000, className, navigationArrows = true }: BannerSlideshowProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -73,42 +74,47 @@ function Banner({ slides, autoplaySpeed = 3000, className }: BannerSlideshowProp
 
             <div className='dark:h-full dark:w-full dark:absolute dark:bg-black dark:opacity-50'></div>
 
-            {/* Content overlay */}
             <div className='absolute inset-0 bg-black/30 flex flex-col justify-center px-6 sm:px-12 md:px-16 lg:px-24'>
-              <div className='max-w-2xl text-white'>
-                <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4'>{slide.title}</h2>
-                <p className='text-sm sm:text-base md:text-lg mb-4 sm:mb-6 max-w-md'>{slide.description}</p>
+              {/* Content overlay */}
+              <div>
+                <div className='max-w-2xl text-white'>
+                  <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4'>{slide.title}</h2>
+                  <p className='text-sm sm:text-base md:text-lg mb-4 sm:mb-6 max-w-md'>{slide.description}</p>
+                </div>
               </div>
-            </div>
-
-            {/* CTA Button */}
-            <div className='absolute bottom-6 left-6 sm:bottom-8 sm:left-12 md:bottom-10 md:left-16 lg:bottom-12 lg:left-24 '>
-              <Button
-                asChild
-                size='lg'
-                className='font-medium dark:bg-slate-950 bg-slate-100 text-black dark:text-slate-100'>
-                <Link href={slide.buttonUrl}>{slide.buttonName}</Link>
-              </Button>
+              {/*  Button */}
+              {slide.buttonName && slide.buttonUrl && (
+                <div>
+                  <Button
+                    asChild
+                    size='lg'
+                    className='font-medium dark:bg-slate-950 dark:hover:bg-slate-800 bg-slate-100 hover:bg-slate-200 text-black dark:text-slate-100 transition-all duration-300 '>
+                    <Link href={slide.buttonUrl}>{slide.buttonName}</Link>
+                  </Button>
+                </div>
+              )}
             </div>
           </div>
         ))}
       </div>
-
       {/* Navigation arrows */}
-      <button
-        onClick={prevSlide}
-        className='absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white rounded-full p-2 sm:p-3 transition-colors'
-        aria-label='Previous slide'>
-        <ChevronLeft className='h-5 w-5 sm:h-6 sm:w-6' />
-      </button>
+      {navigationArrows && (
+        <button
+          onClick={prevSlide}
+          className='absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white rounded-full p-2 sm:p-3 transition-colors'
+          aria-label='Previous slide'>
+          <ChevronLeft className='h-5 w-5 sm:h-6 sm:w-6' />
+        </button>
+      )}
 
-      <button
-        onClick={nextSlide}
-        className='absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white rounded-full p-2 sm:p-3 transition-colors'
-        aria-label='Next slide'>
-        <ChevronRight className='h-5 w-5 sm:h-6 sm:w-6' />
-      </button>
-
+      {navigationArrows && (
+        <button
+          onClick={nextSlide}
+          className='absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white rounded-full p-2 sm:p-3 transition-colors'
+          aria-label='Next slide'>
+          <ChevronRight className='h-5 w-5 sm:h-6 sm:w-6' />
+        </button>
+      )}
       {/* Slide indicators */}
       <div className='absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2'>
         {slides.map((_, index) => (

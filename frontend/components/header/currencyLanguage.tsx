@@ -3,7 +3,8 @@
 import { Globe, ChevronDown, Sun, Moon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { onWindowMatch } from '@/utils/windowThemeMatch';
 
 interface Language {
   code: string;
@@ -32,18 +33,52 @@ const currencies: Currency[] = [
 function CurrencyLanguage() {
   const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
   const [selectedCurrency, setSelectedCurrency] = useState(currencies[0]);
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [theme, setTheme] = useState<'light' | 'dark'>(typeof window !== 'undefined' && localStorage.getItem('theme') ? (localStorage.getItem('theme') as 'light' | 'dark') : 'light');
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
-    // Add or remove the "dark" class from the document root
-    if (newTheme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
   };
+
+  onWindowMatch();
+
+  useEffect(() => {
+    switch (theme) {
+      case 'dark':
+        document.documentElement.classList.add('dark');
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('theme', 'dark');
+        }
+        break;
+
+      case 'light':
+        document.documentElement.classList.remove('dark');
+
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('theme', 'light');
+        }
+        break;
+
+      default:
+        if (typeof window !== 'undefined') {
+          localStorage.removeItem('theme');
+        }
+        onWindowMatch();
+        break;
+    }
+  }, [theme]);
+
+  if (typeof window !== 'undefined') {
+    window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change', (e) => {
+      if (!('theme' in localStorage)) {
+        if (e.matches) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      }
+    });
+  }
 
   return (
     <div className='flex items-center gap-2'>

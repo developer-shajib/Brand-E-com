@@ -87,40 +87,42 @@ dark:text-slate-100'>
             <ul className='space-y-4'>
               <li>
                 <Link
-                  href='/about'
-                  className='text-black dark:text-slate-100 hover:text-slate-600 transition-colors  '>
+                  href='#'
+                  className='text-black dark:text-slate-100 dark:hover:text-blue-400 duration-300 hover:text-slate-600 transition-colors  '>
                   About Us
                 </Link>
               </li>
+
               <li>
                 <Link
-                  href='/careers'
+                  href='#'
                   className='text-black
-dark:text-slate-100 hover:text-slate-600 transition-colors  '>
-                  Careers
+dark:text-slate-100 dark:hover:text-blue-400 duration-300 hover:text-slate-600 transition-colors  '>
+                  Our History
                 </Link>
               </li>
               <li>
                 <Link
-                  href='/blog'
+                  href='#'
                   className='text-black
-dark:text-slate-100 hover:text-slate-600 transition-colors  '>
+dark:text-slate-100 dark:hover:text-blue-400 duration-300 hover:text-slate-600 transition-colors  '>
+                  Our Purpose
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='#'
+                  className='text-black
+dark:text-slate-100 dark:hover:text-blue-400 duration-300 hover:text-slate-600 transition-colors  '>
                   Blog
                 </Link>
               </li>
+
               <li>
                 <Link
-                  href='/press'
+                  href='#'
                   className='text-black
-dark:text-slate-100 hover:text-slate-600 transition-colors  '>
-                  Press Releases
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href='/contact'
-                  className='text-black
-dark:text-slate-100 hover:text-slate-600 transition-colors  '>
+dark:text-slate-100 dark:hover:text-blue-400 duration-300 hover:text-slate-600 transition-colors  '>
                   Contact Us
                 </Link>
               </li>
@@ -137,33 +139,33 @@ dark:text-slate-100  '>
             <ul className='space-y-4'>
               <li>
                 <Link
-                  href='/help'
+                  href='#'
                   className='text-black
-dark:text-slate-100 hover:text-slate-600 transition-colors  '>
+dark:text-slate-100 dark:hover:text-blue-400 duration-300 hover:text-slate-600 transition-colors  '>
                   Help Center
                 </Link>
               </li>
               <li>
                 <Link
-                  href='/privacy'
+                  href='#'
                   className='text-black
-dark:text-slate-100 hover:text-slate-600 transition-colors  '>
+dark:text-slate-100 dark:hover:text-blue-400 duration-300 hover:text-slate-600 transition-colors  '>
                   Privacy Policy
                 </Link>
               </li>
               <li>
                 <Link
-                  href='/terms'
+                  href='#'
                   className='text-black
-dark:text-slate-100 hover:text-slate-600 transition-colors  '>
+dark:text-slate-100 dark:hover:text-blue-400 duration-300 hover:text-slate-600 transition-colors  '>
                   Terms of Service
                 </Link>
               </li>
               <li>
                 <Link
-                  href='/faq'
+                  href='#'
                   className='text-black
-dark:text-slate-100 hover:text-slate-600 transition-colors  '>
+dark:text-slate-100 dark:hover:text-blue-400 duration-300 hover:text-slate-600 transition-colors  '>
                   FAQ
                 </Link>
               </li>
@@ -179,51 +181,47 @@ dark:text-slate-100'>
             </h3>
 
             {/* Social Media Icons */}
-            <div className='flex space-x-4 mb-6'>
+            <div className='flex space-x-4 mb-6 sm:flex-wrap'>
               <Link
-                href='https://facebook.com'
+                href='#'
                 target='_blank'
+                aria-label='Facebook'
                 rel='noopener noreferrer'
                 className='bg-slate-700 text-slate-100
-dark:bg-slate-900 p-2 rounded-full hover:bg-slate-700 transition-colors'>
+dark:bg-slate-900 p-2 rounded-full hover:bg-slate-900 transition-colors'>
                 <Facebook className='h-5 w-5' />
-                <span className='sr-only'>Facebook</span>
               </Link>
               <Link
-                href='https://instagram.com'
+                href='#'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='bg-slate-700 text-slate-100
-dark:bg-slate-900 p-2 rounded-full hover:bg-slate-700 transition-colors'>
+dark:bg-slate-900 p-2 rounded-full hover:bg-slate-900 transition-colors'>
                 <Instagram className='h-5 w-5' />
-                <span className='sr-only'>Instagram</span>
               </Link>
               <Link
-                href='https://twitter.com'
+                href='#'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='bg-slate-700 text-slate-100
-dark:bg-slate-900 p-2 rounded-full hover:bg-slate-700 transition-colors'>
+dark:bg-slate-900 p-2 rounded-full hover:bg-slate-900 transition-colors'>
                 <Twitter className='h-5 w-5' />
-                <span className='sr-only'>Twitter</span>
               </Link>
               <Link
-                href='https://linkedin.com'
+                href='#'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='bg-slate-700 text-slate-100
-dark:bg-slate-900 p-2 rounded-full hover:bg-slate-700 transition-colors'>
+dark:bg-slate-900 p-2 rounded-full hover:bg-slate-900 transition-colors'>
                 <Linkedin className='h-5 w-5' />
-                <span className='sr-only'>LinkedIn</span>
               </Link>
               <Link
-                href='https://youtube.com'
+                href='#'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='bg-slate-700 text-slate-100
-dark:bg-slate-900 p-2 rounded-full hover:bg-slate-700 transition-colors'>
+dark:bg-slate-900 p-2 rounded-full hover:bg-slate-900 transition-colors'>
                 <Youtube className='h-5 w-5' />
-                <span className='sr-only'>YouTube</span>
               </Link>
             </div>
 
@@ -245,7 +243,7 @@ dark:bg-slate-900 p-2 rounded-full hover:bg-slate-700 transition-colors'>
                 </div>
                 <Button
                   type='submit'
-                  className='w-full flex items-center justify-center bg-slate-900 text-slate-100 dark:bg-slate-100 dark:text-slate-900'
+                  className='w-full flex items-center justify-center bg-slate-900 text-slate-100 dark:bg-slate-100 dark:text-slate-900 cursor-pointer transition-colors hover:bg-slate-800 dark:hover:bg-slate-200 duration-300 group'
                   disabled={subscriptionStatus === 'loading'}>
                   {subscriptionStatus === 'loading' ? (
                     'Subscribing...'
@@ -255,7 +253,7 @@ dark:bg-slate-900 p-2 rounded-full hover:bg-slate-700 transition-colors'>
                     'Please enter a valid email'
                   ) : (
                     <>
-                      Subscribe <ArrowRight className='ml-2 h-4 w-4' />
+                      Subscribe <ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300' />
                     </>
                   )}
                 </Button>
@@ -275,18 +273,18 @@ dark:bg-slate-900 p-2 rounded-full hover:bg-slate-700 transition-colors'>
             </p>
             <div className='flex space-x-6'>
               <Link
-                href='/privacy'
-                className='text-sm text-slate-900 dark:text-slate-100 hover:text-white transition-colors'>
+                href='#'
+                className='text-sm text-slate-900 dark:text-slate-100 dark:hover:text-slate-300 hover:text-slate-600 duration-300  transition-colors'>
                 Privacy Policy
               </Link>
               <Link
-                href='/terms'
-                className='text-sm text-slate-900 dark:text-slate-100 hover:text-white transition-colors'>
+                href='#'
+                className='text-sm text-slate-900 dark:text-slate-100 dark:hover:text-slate-300 hover:text-slate-600 duration-300  transition-colors'>
                 Terms of Service
               </Link>
               <Link
-                href='/cookies'
-                className='text-sm text-slate-900 dark:text-slate-100 hover:text-white transition-colors'>
+                href='#'
+                className='text-sm text-slate-900 dark:text-slate-100 dark:hover:text-slate-300 hover:text-slate-600 duration-300 transition-colors'>
                 Cookie Policy
               </Link>
             </div>

@@ -7,6 +7,8 @@ interface Category {
   children?: Category[];
 }
 
+import { Building2, Truck, Snowflake, HandCoins, ChartLine, Phone } from 'lucide-react';
+
 // Sample category data with multiple levels
 export const categories: Category[] = [
   {
@@ -208,43 +210,43 @@ export const bannerSlides = [
   {
     id: 1,
     imageUrl: '/bannerImage/banner1.jpg',
-    title: 'Summer Collection 2024',
-    description: 'Discover our latest arrivals for the summer season. Fresh styles for every occasion.',
-    buttonName: 'Shop Now',
-    buttonUrl: '/collections/summer'
+    title: 'Millionaire Expire',
+    description: 'Spicy Freshness',
+    buttonName: 'Explore Now',
+    buttonUrl: '#'
   },
   {
     id: 2,
     imageUrl: '/bannerImage/banner2.jpg',
     title: 'Exclusive Deals',
     description: 'Up to 50% off on selected items. Limited time offer.',
-    buttonName: 'View Offers',
+    // buttonName: 'View Offers',
     buttonUrl: '/sale'
-  },
-  {
-    id: 3,
-    imageUrl: '/bannerImage/banner3.jpg',
-    title: 'New Arrivals',
-    description: 'Be the first to explore our newest products and collections.',
-    buttonName: 'Explore',
-    buttonUrl: '/new-arrivals'
-  },
-  {
-    id: 4,
-    imageUrl: '/bannerImage/banner4.jpg',
-    title: 'New Releases',
-    description: 'Be the first to explore our newest products and collections.',
-    buttonName: 'Explore',
-    buttonUrl: '/new-arrivals'
-  },
-  {
-    id: 5,
-    imageUrl: '/bannerImage/banner5.png',
-    title: 'Recently Browse',
-    description: 'Explore recently browse our newest products and collections.',
-    buttonName: 'Explore',
-    buttonUrl: '/new-arrivals'
   }
+  // {
+  //   id: 3,
+  //   imageUrl: '/bannerImage/banner3.jpg',
+  //   title: 'New Arrivals',
+  //   description: 'Be the first to explore our newest products and collections.',
+  //   buttonName: 'Explore',
+  //   buttonUrl: '/new-arrivals'
+  // },
+  // {
+  //   id: 4,
+  //   imageUrl: '/bannerImage/banner4.jpg',
+  //   title: 'New Releases',
+  //   description: 'Be the first to explore our newest products and collections.',
+  //   buttonName: 'Explore',
+  //   buttonUrl: '/new-arrivals'
+  // },
+  // {
+  //   id: 5,
+  //   imageUrl: '/bannerImage/banner5.png',
+  //   title: 'Recently Browse',
+  //   description: 'Explore recently browse our newest products and collections.',
+  //   buttonName: 'Explore',
+  //   buttonUrl: '/new-arrivals'
+  // }
 ];
 // Sample product data
 export const products = [
@@ -397,5 +399,45 @@ export const products = [
     rating: 4.6,
     reviewCount: 362,
     hasVoucher: false
+  }
+];
+
+// why choose us data
+export const whyChooseUsData = [
+  {
+    id: 1,
+    title: 'Trusted Global Company & Brand',
+    description: 'We are a verified USA LLC, offering 100% authentic products across international marketplaces.',
+    icon: Building2
+  },
+  {
+    id: 2,
+    title: 'Fast & Secure Shipping',
+    description: 'We partner with leading delivery services and use our own warehouse system to guarantee timely and safe order fulfillment.',
+    icon: Truck
+  },
+  {
+    id: 3,
+    title: 'Effortless Shopping Experience',
+    description: 'From smooth order processing to reliable support, we make buying from us simple and stress-free.',
+    icon: Snowflake
+  },
+  {
+    id: 4,
+    title: 'Competitive Pricing',
+    description: 'Get premium-quality products at the best industry rates without compromising on authenticity',
+    icon: HandCoins
+  },
+  {
+    id: 5,
+    title: 'Guaranteed Satisfaction',
+    description: 'With a commitment to quality and trust, we deliver products that meet your expectations every time.',
+    icon: ChartLine
+  },
+  {
+    id: 6,
+    title: '24/7 Customer Support',
+    description: 'Our dedicated support team is available around the clock to assist you anytime, anywhere.',
+    icon: Phone
   }
 ];
