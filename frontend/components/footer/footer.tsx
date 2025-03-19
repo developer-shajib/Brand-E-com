@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { COMPANY_NAME } from '@/lib/constants';
 
-export default function Footer() {
+export default function Footer({ scrollToSection }: { scrollToSection: () => void }) {
   const [email, setEmail] = useState('');
   const [subscriptionStatus, setSubscriptionStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
@@ -162,12 +162,12 @@ dark:text-slate-100 dark:hover:text-blue-400 duration-300 hover:text-slate-600 t
                 </Link>
               </li>
               <li>
-                <Link
-                  href='#'
+                <button
+                  onClick={scrollToSection}
                   className='text-black
 dark:text-slate-100 dark:hover:text-blue-400 duration-300 hover:text-slate-600 transition-colors  '>
                   FAQ
-                </Link>
+                </button>
               </li>
             </ul>
           </div>
